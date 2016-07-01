@@ -1,0 +1,19 @@
+{
+  "name": "react-native-ezviz",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lumin824/react-native-ezviz.git"
+  },
+  "author": "lumin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lumin824/react-native-ezviz/issues"
+  },
+  "homepage": "https://github.com/lumin824/react-native-ezviz#readme"
+}
