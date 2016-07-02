@@ -1,12 +1,8 @@
 package com.lumin824.ezviz;
 
-import android.view.View;
-
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
-
-import java.util.List;
 
 /**
  * Created by lumin on 16/7/1.

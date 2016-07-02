@@ -5,6 +5,7 @@ import {
 
 let { EzvizModule } = NativeModules;
 
+export var setAccessToken = EzvizModule.setAccessToken;
 export var getCameraList = EzvizModule.getCameraList;
 export var getDeviceInfo = EzvizModule.getDeviceInfo;
 export var getDeviceList = EzvizModule.getDeviceList;

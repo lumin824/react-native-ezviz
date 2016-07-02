@@ -19,6 +19,7 @@ android {
     targetSdkVersion 22
     versionCode 1
     versionName "1.0"
+    buildConfigField("String", "APP_KEY", "\"$EZVIZ_APP_KEY\"")
   }
   lintOptions {
     abortOnError false

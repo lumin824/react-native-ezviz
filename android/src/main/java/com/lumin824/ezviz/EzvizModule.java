@@ -25,6 +25,8 @@ import javax.annotation.Nullable;
 
 public class EzvizModule extends ReactContextBaseJavaModule {
 
+  private static String APP_KEY = BuildConfig.APP_KEY;
+
   public EzvizModule(ReactApplicationContext reactContext) {
     super(reactContext);
   }
@@ -40,9 +42,19 @@ public class EzvizModule extends ReactContextBaseJavaModule {
 
     Application application = (Application) getReactApplicationContext().getBaseContext();
 
-    EZOpenSDK.initLib(application, "95ed8b332fdb402cb8085926144ecb61","");
-    EZOpenSDK.getInstance().setAccessToken("at.6m3onvsn7mmyhud4ai601ywqdn7tc9vg-3gl26woblc-19qyfes-nv6q7uam9");
+    EZOpenSDK.initLib(application, APP_KEY,"");
 
+  }
+
+  @Override
+  public void onCatalystInstanceDestroy() {
+    super.onCatalystInstanceDestroy();
+    EZOpenSDK.finiLib();
+  }
+
+  @ReactMethod
+  public void setAccessToken(String accessToken){
+    EZOpenSDK.getInstance().setAccessToken(accessToken);
   }
 
   @ReactMethod
@@ -103,7 +115,6 @@ public class EzvizModule extends ReactContextBaseJavaModule {
     int ret = EZOpenSDK.getInstance().controlPTZ(cameraId,
             EZPTZCommand.valueOf(command),
             EZPTZAction.valueOf(action), speed);
-
     promise.resolve(String.valueOf(ret));
   }
 
