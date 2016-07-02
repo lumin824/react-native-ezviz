@@ -1,15 +1,17 @@
 package com.lumin824.ezviz;
 
-import android.graphics.Color;
 import android.view.View;
 
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
+import com.facebook.react.uimanager.annotations.ReactProp;
+
+import java.util.List;
 
 /**
  * Created by lumin on 16/7/1.
  */
-public class EzvizManager extends SimpleViewManager<View> {
+public class EzvizManager extends SimpleViewManager<EzvizView> {
 
     @Override
     public String getName() {
@@ -17,9 +19,19 @@ public class EzvizManager extends SimpleViewManager<View> {
     }
 
     @Override
-    protected View createViewInstance(ThemedReactContext reactContext) {
-        View view = new View(reactContext);
-        view.setBackgroundColor(Color.RED);
+    protected EzvizView createViewInstance(ThemedReactContext reactContext) {
+        EzvizView view = new EzvizView(reactContext);
         return view;
+    }
+
+    @Override
+    public void onDropViewInstance(EzvizView view) {
+        super.onDropViewInstance(view);
+        view.stopRealPlay();
+    }
+
+    @ReactProp(name="cameraId")
+    public void setCameraId(EzvizView view, String cameraId){
+        view.setCameraId(cameraId);
     }
 }
