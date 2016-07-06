@@ -69,7 +69,7 @@ public class EzvizModule extends ReactContextBaseJavaModule {
         camera.putString("cameraName", cameraInfo.getCameraName());
         camera.putString("deviceId", cameraInfo.getDeviceId());
         camera.putString("deviceName", cameraInfo.getDeviceName());
-        camera.putInt("onlineStatus", cameraInfo.getOnlineStatus());
+        camera.putInt("isOnline", cameraInfo.getOnlineStatus());
         array.pushMap(camera);
       }
       promise.resolve(array);
