@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D69C1341D3DD31E0007BC4C /* EzvizView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D69C1331D3DD31E0007BC4C /* EzvizView.m */; };
+		6D69C1381D3DD3AF0007BC4C /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D69C1351D3DD3AF0007BC4C /* libcrypto.a */; };
+		6D69C1391D3DD3AF0007BC4C /* libEZOpenSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D69C1361D3DD3AF0007BC4C /* libEZOpenSDK.a */; };
+		6D69C13A1D3DD3AF0007BC4C /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D69C1371D3DD3AF0007BC4C /* libssl.a */; };
 		6DDC74691D26C18D00D0DFCA /* EzvizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC74671D26C18C00D0DFCA /* EzvizManager.m */; };
 		6DDC746A1D26C18D00D0DFCA /* EzvizModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC74681D26C18C00D0DFCA /* EzvizModule.m */; };
 /* End PBXBuildFile section */
@@ -25,6 +29,11 @@
 
 /* Begin PBXFileReference section */
 		6D1FD8DD1CDD097A00450F77 /* libRNEzviz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNEzviz.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D69C1321D3DD31E0007BC4C /* EzvizView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EzvizView.h; sourceTree = "<group>"; };
+		6D69C1331D3DD31E0007BC4C /* EzvizView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EzvizView.m; sourceTree = "<group>"; };
+		6D69C1351D3DD3AF0007BC4C /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		6D69C1361D3DD3AF0007BC4C /* libEZOpenSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEZOpenSDK.a; sourceTree = "<group>"; };
+		6D69C1371D3DD3AF0007BC4C /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		6DDC74671D26C18C00D0DFCA /* EzvizManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EzvizManager.m; sourceTree = "<group>"; };
 		6DDC74681D26C18C00D0DFCA /* EzvizModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EzvizModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -34,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D69C1381D3DD3AF0007BC4C /* libcrypto.a in Frameworks */,
+				6D69C1391D3DD3AF0007BC4C /* libEZOpenSDK.a in Frameworks */,
+				6D69C13A1D3DD3AF0007BC4C /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +55,11 @@
 		6D1FD8D41CDD097A00450F77 = {
 			isa = PBXGroup;
 			children = (
+				6D69C1351D3DD3AF0007BC4C /* libcrypto.a */,
+				6D69C1361D3DD3AF0007BC4C /* libEZOpenSDK.a */,
+				6D69C1371D3DD3AF0007BC4C /* libssl.a */,
+				6D69C1321D3DD31E0007BC4C /* EzvizView.h */,
+				6D69C1331D3DD31E0007BC4C /* EzvizView.m */,
 				6DDC74671D26C18C00D0DFCA /* EzvizManager.m */,
 				6DDC74681D26C18C00D0DFCA /* EzvizModule.m */,
 				6D1FD8DE1CDD097A00450F77 /* Products */,
@@ -115,6 +132,7 @@
 			files = (
 				6DDC746A1D26C18D00D0DFCA /* EzvizModule.m in Sources */,
 				6DDC74691D26C18D00D0DFCA /* EzvizManager.m in Sources */,
+				6D69C1341D3DD31E0007BC4C /* EzvizView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +235,10 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -236,6 +258,10 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
